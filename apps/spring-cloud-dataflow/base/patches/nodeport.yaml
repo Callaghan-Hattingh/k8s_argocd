@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: spring-cloud-dataflow-nodeport
+  namespace: spring-cloud-dataflow
+spec:
+  type: NodePort
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 308080
+    protocol: TCP
+  selector:
+    app: postgresql

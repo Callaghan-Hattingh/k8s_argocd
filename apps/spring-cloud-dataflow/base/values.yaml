@@ -1,7 +1,7 @@
 server:
   service:
-    type: LoadBalancer
-    loadBalancerIP: "192.168.66.156"
+    type: Nodeport
+#    loadBalancerIP: "192.168.66.156"
 
   image:
     debug: true

@@ -13,7 +13,7 @@ minikube start
 set envs below:
 ```shell
 export GIT_TOKEN=...
-export GIT_REPO=...
+export GIT_REPO=https://github.com/Callaghan-Hattingh/k8s_argocd.git
 ```
 setup argo on cluster 
 ```shell
