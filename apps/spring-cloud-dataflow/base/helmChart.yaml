@@ -1,0 +1,11 @@
+apiVersion: builtin
+kind: HelmChartInflationGenerator
+metadata:
+  name: spring-cloud-dataflow
+name: spring-cloud-dataflow
+namespace: spring-cloud-dataflow
+releaseName: spring-cloud-dataflow
+repo: https://charts.bitnami.com/bitnami
+valuesFile: values.yaml
+version: 26.13.1
+includeCRDs: true

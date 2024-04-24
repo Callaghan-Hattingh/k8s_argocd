@@ -1,0 +1,63 @@
+server:
+  service:
+    type: LoadBalancer
+    loadBalancerIP: "192.168.66.156"
+
+  image:
+    debug: true
+
+#  hostAliases:
+#    - ip: 10.43.98.139 # this will change
+#      hostnames:
+#        - spring-cloud-dataflow-mariadb
+
+  configuration:
+    trustK8sCerts: true
+
+#  ingress:
+#    enabled: true
+
+#  extraEnvVars:
+#    - name: SPRING_CLOUD_SKIPPER_CLIENT_SERVER_URI
+#      value: http://spring-cloud-dataflow-skipper/api
+
+skipper:
+  enabled: true
+  image:
+    debug: true
+
+#  hostAliases:
+#    - ip: 10.43.98.139 # this will change
+#      hostnames:
+#        - spring-cloud-dataflow-mariadb
+
+#  image:
+#    pullSecrets: true
+
+  configuration:
+    trustK8sCerts: true
+
+flyway:
+  enabled: true
+
+kafka:
+  enabled: false
+
+rabbitmq:
+  enabled: true
+
+#  hostAliases:
+#    - ip: 10.43.0.1
+#      hostnames:
+#        - kubernetes.default
+#
+  auth:
+    username: "username"
+    password: "password"
+    securePassword: false
+    erlangCookie: "i1KjxozEdKaP2xuAgVMa3hOS60mbExaD"
+
+#mariadb:
+#  enabled: true
+#  jdbcParameter:
+#    useMysqlMetadata: false

@@ -1,0 +1,41 @@
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: simple-service
+#  namespace: hello-world
+#spec:
+#  selector:
+#    app: trivial-go-web-app
+#  ports:
+#    - protocol: TCP
+#      port: 80
+#      targetPort: 8080
+---
+#apiVersion: v1
+#kind: Service
+#metadata:
+#  name: hello-world-nodeport
+#  namespace: hello-world
+#spec:
+#  type: NodePort
+#  ports:
+#  - port: 8080
+#    targetPort: 8080
+#    nodePort: 32002
+#    protocol: TCP
+#  selector:
+#    app: trivial-go-web-app
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: simple-sevice
+  namespace: hello-world
+spec:
+  type: LoadBalancer
+  selector:
+    app: trivial-go-web-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

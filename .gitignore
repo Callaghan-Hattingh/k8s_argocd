@@ -1,0 +1,8 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen
+/bootstrap/argo-cd/values.yaml
+charts
+deploy.yaml

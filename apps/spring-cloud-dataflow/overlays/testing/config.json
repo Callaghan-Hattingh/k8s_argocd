@@ -1,0 +1,11 @@
+{
+  "appName": "spring-cloud-dataflow",
+  "userGivenName": "spring-cloud-dataflow",
+  "destNamespace": "spring-cloud-dataflow",
+  "destServer": "https://kubernetes.default.svc",
+  "srcPath": "apps/spring-cloud-dataflow/overlays/testing",
+  "srcRepoURL": "https://github.com/Callaghan-Hattingh/k8s_argocd.git",
+  "srcTargetRevision": "",
+  "labels": null,
+  "annotations": null
+}
